@@ -23,3 +23,13 @@ small { display: block; color: #d6c7d5; font-size: .9rem; }
 .button:active { transform: translateY(2px); }
 :focus-visible { outline: 3px solid #beff89; outline-offset: 4px; }
 button + small { margin-top: 1.15rem; }
+.nav, nav, #choices, #filters { display:flex; flex-wrap:wrap; align-items:center; gap: .9rem; }
+.nav { justify-content:space-between; }
+nav button, #filters button { background: transparent; color:inherit; border:1px solid currentColor; border-radius:.45rem; padding:.5rem .8rem; cursor:pointer; font:inherit; }
+nav button[aria-pressed=true], #filters button[aria-pressed=true] { background:#c5ff8e; color:#1c2926; }
+a { color:inherit; }
+.light { color-scheme: light; background:#faf3e7; color:#302235; }
+.light body { background:linear-gradient(#ffead9, #faf3e7 38rem); }
+.light article, .light section { background:#fffaf0; border-color:#867686; box-shadow:0 .4rem 0 #cdbccb; }
+.light small { color:#564559; }
+.light :focus-visible { outline-color:#6e2c7b; }

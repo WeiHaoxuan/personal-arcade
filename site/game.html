@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>十秒挑战 · 个人游乐厅</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <header><a href="index.html">◉　返回大厅</a></header>
+  <main>
+    <h1>十秒挑战</h1>
+    <p>按下开始，闭眼默数。觉得十秒到了，再按一次。</p>
+    <section aria-label="游戏机">
+      <div id="display" class="screen" aria-hidden="true">10.00</div>
+      <div class="panel">
+        <p id="message" role="status">目标时间 10.00 秒</p>
+        <button class="button" id="play" type="button">开始计时</button>
+        <small>点击按钮，或用 Tab 选中后按空格。</small>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

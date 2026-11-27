@@ -20,4 +20,21 @@ function projectCard(project) {
   card.append(screen, panel);
   return card;
 }
-document.querySelector("#projects").replaceChildren(...projects.map(projectCard));
+const filters = document.querySelector("#filters");
+const categories = ["全部", ...new Set(projects.map(project => project.category))];
+function selectCategory(category) {
+  const visible = category === "全部" ? projects : projects.filter(project => project.category === category);
+  document.querySelector("#projects").replaceChildren(...visible.map(projectCard));
+  document.querySelector("#count").textContent = "共 " + visible.length + " 款游戏";
+  for (const button of filters.children) {
+    button.setAttribute("aria-pressed", String(button.textContent === category));
+  }
+}
+for (const category of categories) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = category;
+  button.onclick = () => selectCategory(category);
+  filters.append(button);
+}
+selectCategory("全部");

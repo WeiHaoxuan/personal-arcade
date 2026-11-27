@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>节奏回声 · 个人游乐厅</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="rhythm.js"></script>
+</head>
+<body>
+  <header><a href="index.html">◉　返回大厅</a></header>
+  <main>
+    <h1>节奏回声</h1>
+    <p>先听四拍，也可以看屏幕提示。轮到你时，照着刚才的快慢敲四下。</p>
+    <section aria-label="节奏游戏机">
+      <div class="screen" id="beat" aria-hidden="true">♪ ♫ ♪</div>
+      <div class="panel">
+        <p id="feedback" role="status">准备好就试听。</p>
+        <button id="pad" class="button" type="button">播放节奏</button>
+        <small>用鼠标、触屏或选中按钮后按空格敲击。</small>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
